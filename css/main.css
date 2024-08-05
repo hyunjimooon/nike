@@ -1,0 +1,123 @@
+.inner {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    padding: 0px 48px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.pr {
+    position: relative;
+}
+
+.pa {
+    position: absolute;
+}
+
+.df {
+    display: flex;
+}
+
+.gnb1 .inner {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gnb1, .gnb3 {
+    width: 100%;
+    background-color: var(--wild_sand);
+}
+
+.gnb1 {
+    height: 36px;
+}
+
+.lists_1 {
+    font-size: 12px;
+    text-align: right;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.vertical-line {
+    border-right: 1px solid;
+    height: 12px;
+    margin: 12px;
+}
+
+.gnb2 {
+    width: 100%;
+    height: 60px;
+    background-color: var(--white);
+}
+
+.gnb2.nikelogo {
+    align-items: center;
+}
+
+.list_2 {
+    display: flex;
+    justify-content: center
+}
+
+.input_group {
+    display: flex;
+    align-items: center;
+}
+
+.input_group label {
+    width: 10.5rem;
+    height: 2.25rem;
+    border-radius: 1.5rem;
+}
+
+.input_group button {
+    border-radius: 1.5rem;
+}
+
+.gnb3 {
+    width: 100%;
+    height: 58px;
+    background-color: var(--wild_sand);
+}
+
+.title {
+        color: var(--cod_gray);
+        text-align: center;
+        font-family: "Noto Sans KR";
+        position: absolute;
+        top: 1500px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 36px;
+}
+
+h1 {
+    padding: 36px;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: bolder;
+}
+
+h2 {
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 28px;
+    padding-bottom: 36px;
+}
+
+
+.title>button {
+    width: 110px;
+    height: 40px;
+    border-radius: 30px;
+    color: var(--white);
+    background: var(--cod_gray, #111);
+    justify-content: center;
+    align-items: center;
+}
+
