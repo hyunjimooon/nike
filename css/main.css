@@ -58,6 +58,11 @@ li a {
     margin: 12px;
 }
 
+nav {
+    position: relative;
+    width: 100%;
+}
+
 .gnb2 {
     width: 100%;
     background-color: var(--white);
@@ -96,7 +101,7 @@ li a {
     display: none;
     position: absolute;
     background-color: (var(--white));
-    padding: 10px;
+    padding: 10%;
     width: 100%;
     left: 0;
     box-shadow: 0 0.2rem 0.2rem rgb(0, 0, 0 / 7%);
@@ -104,9 +109,8 @@ li a {
     height: 0;
     /* overflow: hidden; */
     padding: 0;
+    text-align: center;
 }
-
-
 
 .lists_2 li:hover .dep2 {
     display: block;
@@ -115,12 +119,12 @@ li a {
 .dep2 dt {
     color: var(--black);
     font-weight: bold;
-    font-size: 16pt;
+    padding: 30px;
     
 }
 .dep2 dd {
     color: var(--black);
-    font-size: 12pt;
+    padding: 30px;
     
 }
 
@@ -216,6 +220,8 @@ li a {
     color: var(--white);
     background: var(--cod_gray, #111);
     margin: 30px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .title button:hover {
