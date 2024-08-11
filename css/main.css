@@ -38,6 +38,7 @@
     font-size: 12px;
     display: flex;
     align-items: center;
+    font-weight: bolder;
 }
 
 .lists_1 li {
@@ -66,14 +67,68 @@ li a {
     justify-content: space-between;
 }
 
+
+
+.gnb2 li>a {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+}
+
 .lists_2 {
     display: flex;
     justify-content: center;
     gap: 26px;
 }
 
-.input_group {
+.nikelogo {
+    margin-right: auto;
+}
+
+
+.gnb2 .inner {
+    justify-content: space-between;
+    align-items: center;
     display: flex;
+}
+
+.dep2 {
+    display: none;
+    position: absolute;
+    background-color: (var(--white));
+    padding: 10px;
+    width: 100%;
+    left: 0;
+    box-shadow: 0 0.2rem 0.2rem rgb(0, 0, 0 / 7%);
+    transition: all 0.5s ease;
+    height: 0;
+    /* overflow: hidden; */
+    padding: 0;
+}
+
+
+
+.lists_2 li:hover .dep2 {
+    display: block;
+}
+
+.dep2 dt {
+    color: var(--black);
+    font-weight: bold;
+    font-size: 16pt;
+    
+}
+.dep2 dd {
+    color: var(--black);
+    font-size: 12pt;
+    
+}
+
+
+
+/* gnb2*/
+
+.input_group {
     align-items: center;
     gap: 20px;
 }
@@ -120,8 +175,13 @@ li a {
 }
 
 
-.gnb3 {
+
+.gnb3 .inner {
     height: 58px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
 }
 
 .title {
