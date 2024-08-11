@@ -24,7 +24,8 @@
     align-items: center;
 }
 
-.gnb1, .gnb3 {
+.gnb1,
+.gnb3 {
     width: 100%;
     background-color: var(--wild_sand);
 }
@@ -33,19 +34,22 @@
     height: 36px;
 }
 
-li a{
-    list-style: none;
-    text-decoration: none;
-    color: var(--black);
-
-}
 .lists_1 {
     font-size: 12px;
-    text-align: right;
-    position: relative;
     display: flex;
     align-items: center;
 }
+
+.lists_1 li {
+    margin: 0 10px;
+}
+
+li a {
+    list-style: none;
+    text-decoration: none;
+    color: var(--black);
+}
+
 
 .vertical-line {
     border-right: 1px solid;
@@ -58,76 +62,129 @@ li a{
     background-color: var(--white);
 }
 
-.gnb2.nikelogo {
-    align-items: center;
+.gnb2 .inner {
+    justify-content: space-between;
 }
 
-.list_2 {
+.lists_2 {
     display: flex;
-    justify-content: center
+    justify-content: center;
+    gap: 26px;
 }
 
 .input_group {
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 
-.input_group label {
-    width: 10.5rem;
+.search-form {
+    position: relative;
+    width: 168px;
+}
+
+.search-form input {
+    width: 100%;
+    padding-right: 44px;
+    border-radius: 1.5rem;
+    border: 1px;
+    background-color: var(--wild_sand);
     height: 2.25rem;
-    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
 }
 
-.input_group button {
-    border-radius: 1.5rem;
+.search-form input:hover {
+    background-color: var(--french_gray);
+    cursor: pointer;
 }
+
+.search-form button img {
+    transition: all 0.3s ease;
+}
+
+.search-form button:hover {
+    border-radius: 1.5rem;
+    background-color: var(--french_gray);
+    cursor: pointer;
+}
+
+.search-form button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border: none;
+    background: none;
+    padding: 0 10px;
+}
+
 
 .gnb3 {
     height: 58px;
-    background-color: var(--wild_sand);
 }
 
 .title {
-        color: var(--cod_gray);
-        text-align: center;
-        font-family: "Noto Sans KR";
-        position: absolute;
-        top: 1500px;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 36px;
+    color: var(--cod_gray);
+    text-align: center;
+    font-family: "Noto Sans KR";
+    padding: auto;
 }
 
-h1 {
+.ncs .inner img {
+    width: 100%;
+}
+
+.ncs h1 {
     padding: 36px;
     font-size: 60px;
     font-style: normal;
     font-weight: bolder;
 }
 
-h2 {
+.ncs h2 {
     text-align: center;
     font-size: 16px;
     font-style: normal;
-    line-height: 28px;
-    padding-bottom: 36px;
 }
 
 
-.title>button {
+.title button {
     width: 110px;
     height: 40px;
     border-radius: 30px;
     color: var(--white);
     background: var(--cod_gray, #111);
-    justify-content: center;
-    align-items: center;
+    margin: 30px;
+}
+
+.title button:hover {
+    background-color: var(--jumbo);
+    cursor: pointer;
 }
 
 
-.slider1x2{
-    background-color: rgb(219, 219, 219);
+.slider1x2 {
+    width: 100%;
 }
+
+.slider1x2 h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.slider1x2 h3 {
+    width: 100%;
+    font-weight: bold;
+    text-align: right;
+    font-size: 16px;
+}
+
+.sliderbutton {
+    justify-content: flex-end;
+}
+
+
 
 .circle-button1 {
     width: 48px;
@@ -138,12 +195,15 @@ h2 {
     color: var(--mercury);
     font-size: 24px;
     transition: background-color 0.3s;
+
 }
 
 .circle-button1:hover {
-    background-color: var(--mercury);
+    background-color: var(--french_gray);
     color: var(--black);
+    cursor: pointer;
 }
+
 .circle-button2 {
     width: 48px;
     height: 48px;
@@ -156,19 +216,11 @@ h2 {
 }
 
 .circle-button2:hover {
-    background-color: var(--wild_sand);
+    background-color: var(--french_gray);
+    cursor: pointer;
 }
 
 .img_container {
+    width: 100%;
     gap: 10px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.img_item {
-    text-align: left;
-}
-
-.slider2x1 {
-    background-color: aquamarine;
 }
