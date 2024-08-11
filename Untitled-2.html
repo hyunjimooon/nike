@@ -3,20 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>테스트페이지</title>
-    <style>
-      @import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
-      @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+    <title>나이키</title>
 
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css">
+
+    <!-- Internal CSS -->
+    <style>
       :root {
         --white: #fff;
         --cod_gray: #111111;
         --wild_sand: #f5f5f5;
         --jumbo: #707072;
         --santas_gray: #9e9ea0;
-        --cod_gray_40: #121212;
+        --black: #121212;
         --mercury: #e5e5e5;
         --french_gray: #cacacb;
+      }
+
+      body {
+        font-family: 'Pretendard', sans-serif;
+        background-color: var(--white);
+        margin: 0;
+        padding: 0;
       }
 
       .inner {
@@ -24,17 +34,8 @@
         max-width: 1920px;
         height: 100%;
         padding: 0px 48px;
-        display: flex;
         align-items: center;
-        margin: auto;
-      }
-
-      .pr {
-        position: relative;
-      }
-
-      .pa {
-        position: absolute;
+        margin: 0 auto;
       }
 
       .df {
@@ -46,8 +47,7 @@
         align-items: center;
       }
 
-      .gnb1,
-      .gnb3 {
+      .gnb1, .gnb3 {
         width: 100%;
         background-color: var(--wild_sand);
       }
@@ -58,10 +58,17 @@
 
       .lists_1 {
         font-size: 12px;
-        text-align: right;
-        position: relative;
         display: flex;
         align-items: center;
+      }
+
+      .lists_1 li {
+        margin: 0 10px;
+      }
+
+      li a {
+        text-decoration: none;
+        color: var(--black);
       }
 
       .vertical-line {
@@ -72,74 +79,155 @@
 
       .gnb2 {
         width: 100%;
-        height: 60px;
         background-color: var(--white);
+        padding: 20px 0;
       }
 
-      .gnb2.nikelogo {
-        align-items: center;
+      .gnb2 .inner {
+        justify-content: space-between;
       }
 
-      .list_2 {
+      .lists_2 {
         display: flex;
         justify-content: center;
+        gap: 20px;
       }
 
       .input_group {
         display: flex;
         align-items: center;
+        gap: 10px;
       }
 
-      .input_group label {
-        width: 10.5rem;
-        height: 2.25rem;
-        border-radius: 1.5rem;
-      }
-
-      .input_group button {
+      .input_group input {
+        border: 1px solid var(--french_gray);
+        padding: 5px 10px;
         border-radius: 1.5rem;
       }
 
       .gnb3 {
-        width: 100%;
         height: 58px;
         background-color: var(--wild_sand);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
       }
 
       .title {
         color: var(--cod_gray);
         text-align: center;
         font-family: "Noto Sans KR";
-        position: absolute;
-        top: 1500px;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 36px;
+        padding: 36px 0;
       }
 
       h1 {
-        padding: 36px;
-        font-size: 60px;
-        font-style: normal;
+        font-size: 36px;
         font-weight: bolder;
       }
 
       h2 {
-        text-align: center;
-        font-size: 16px;
-        font-style: normal;
-        line-height: 28px;
-        padding-bottom: 36px;
+        font-size: 24px;
+        font-weight: normal;
       }
 
-      .title > button {
+      .title button {
         width: 110px;
         height: 40px;
         border-radius: 30px;
         color: var(--white);
         background: var(--cod_gray, #111);
+        border: none;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+
+      .slider1x2 {
+        background-color: rgb(219, 219, 219);
+        padding: 20px 0;
+      }
+
+      .slider1x2 .inner {
+        position: relative;
+      }
+
+      .circle-button1, .circle-button2 {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: none;
+        font-size: 24px;
+        transition: background-color 0.3s;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .circle-button1 {
+        background-color: var(--wild_sand);
+        color: var(--mercury);
+        left: 0;
+      }
+
+      .circle-button1:hover {
+        background-color: var(--mercury);
+        color: var(--black);
+      }
+
+      .circle-button2 {
+        background-color: var(--mercury);
+        color: var(--black);
+        right: 0;
+      }
+
+      .circle-button2:hover {
+        background-color: var(--wild_sand);
+      }
+
+      .img_container {
+        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0 60px;
+      }
+
+      .img_item {
+        text-align: center;
+      }
+
+      .img_item img {
+        width: 100%;
+        height: auto;
+      }
+
+      .slider2x1 {
+        background-color: aquamarine;
+      }
+
+      footer {
+        background-color: var(--wild_sand);
+        padding: 20px 0;
+      }
+
+      .sitemap {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .copyright, .content {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .lists {
+        display: flex;
         justify-content: center;
-        align-items: center;
+        gap: 20px;
+      }
+
+      .lists li {
+        list-style: none;
       }
     </style>
   </head>
@@ -150,105 +238,149 @@
         <div class="gnb1">
           <div class="inner df">
             <span>
-              <a href="https://www.nike.com/kr/jordan"
-                ><img src="../nike/img/nike_img/jorden.svg" alt="jorden"
-              /></a>
-              <a href="https://www.converse.co.kr/"
-                ><img src="../nike/img/nike_img/star.svg" alt="star"
-              /></a>
+              <a href="https://www.nike.com/kr/jordan">
+                <img src="./img/nike_img/jorden.svg" alt="Jordan" />
+              </a>
+              <a href="https://www.converse.co.kr/">
+                <img src="./img/nike_img/star.svg" alt="Converse" />
+              </a>
             </span>
             <ul class="lists_1">
-              <li>매장찾기</li>
+              <li><a href="#">매장찾기</a></li>
               <div class="vertical-line"></div>
-              <li>고객센터</li>
+              <li><a href="#">고객센터</a></li>
               <div class="vertical-line"></div>
-              <li>가입하기</li>
+              <li><a href="#">가입하기</a></li>
               <div class="vertical-line"></div>
-              <li>로그인</li>
+              <li><a href="#">로그인</a></li>
             </ul>
           </div>
         </div>
         <div class="gnb2">
-          <div class="inner">
-            <a href="https://www.nike.com/kr/"
-              ><img src="../nike/img/nike_img/nike.svg" alt="" class="nikelogo"
-            /></a>
+          <div class="inner df">
+            <a href="https://www.nike.com/kr/">
+              <img src="./img/nike_img/nike.svg" alt="Nike logo" class="nikelogo" />
+            </a>
             <ul class="lists_2 df">
-              <li>New &amp; Featured</li>
-              <li>Men</li>
-              <li>Women</li>
-              <li>Kids</li>
-              <li>Sale</li>
+              <li><a href="#">New &amp; Featured</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">Kids</a></li>
+              <li><a href="#">Sale</a></li>
             </ul>
             <div class="input_group">
               <form action="#" method="post">
                 <button type="submit">
-                  <img src="./img/nike_img/search.svg" alt="" />
+                  <img src="./img/nike_img/search.svg" alt="Search" />
                 </button>
                 <input type="search" id="subscribe" placeholder="검색" />
               </form>
-              <a href="#"><img src="./img/nike_img/heart.svg" alt="" /></a>
-              <a href="#"><img src="./img/nike_img/bag.svg" alt="" /></a>
+              <a href="#"><img src="./img/nike_img/heart.svg" alt="Heart" /></a>
+              <a href="#"><img src="./img/nike_img/bag.svg" alt="Bag" /></a>
             </div>
+          </div>
+          <div class="inner">
             <div class="gnb3">광고</div>
           </div>
         </div>
       </header>
       <main>
-        <section class="ncs">
+        <section class="ncs df">
           <div class="inner">
-            <img src="./img/nike_img/nike101.jfif" alt="" />
+            <img src="./img/nike_img/nike100.jfif" alt="Nike image" />
             <div class="title">
-              <h1>승자의 저주</h1>
-              <h2>
-                모든 우승, 모든 메달, 모든 기록에도 불구하고 그의 허기는 결코
-                채워지지 않습니다.<br />
-                르브론 제임스는 다시금 승리를 향해 나아갈 뿐입니다.
-              </h2>
+              <h1>순간을 위한 수년간의 노력</h1>
+              <h2>샤캐리 리처드슨의 평생의 헌신이 어떻게 찰나의 순간으로 결정될 수 있는지 살펴보세요.</h2>
               <button>자세히보기</button>
             </div>
           </div>
         </section>
         <section class="slider1x2">
-          <div class="inner"></div>
+          <div class="inner">
+            <h2>일렉트릭팩</h2>
+            <h3>Shop All</h3>
+            <button class="circle-button1">&lt;</button>
+            <button class="circle-button2">&gt;</button>
+            <div class="img_container">
+              <div class="img_item">
+                <img src="./img/nike_img/nike102.jfif" alt="Nike G.T. Hustle 3" />
+                <p>나이키 G.T. 허슬 3</p>
+              </div>
+              <div class="img_item">
+                <img src="./img/nike_img/nike103.jfif" alt="Nike Air Max DN" />
+                <p>나이키 에어 맥스 DN</p>
+              </div>
+              <div class="img_item">
+                <img src="./img/nike_img/nike104.jfif" alt="Nike Mercurial Superfly" />
+                <p>나이키 머큐리얼 슈퍼플라이</p>
+              </div>
+              <div class="img_item">
+                <img src="./img/nike_img/nike105.jfif" alt="Nike Pegasus 41" />
+                <p>나이키 페가수스 41</p>
+              </div>
+            </div>
+          </div>
         </section>
         <section class="slider2x1">
-          <div class="inner"></div>
+          <div class="inner">
+            <h2>Another Promotional Section</h2>
+            <div class="img_container">
+              <div class="img_item">
+                <img src="./img/nike_img/nike106.jfif" alt="Nike Shoes" />
+              </div>
+              <div class="img_item">
+                <img src="./img/nike_img/nike107.jfif" alt="Nike Shoes" />
+              </div>
+            </div>
+          </div>
         </section>
         <section class="ncs df">
-          <div class="inner"></div>
-        </section>
-        <section class="slider1x2">
-          <div class="inner"></div>
-        </section>
-        <section class="ncs">
-          <div class="inner"></div>
-        </section>
-        <section class="slider1x1">
-          <div class="inner"></div>
-        </section>
-        <section class="slider2x1">
-          <div class="inner"></div>
-        </section>
-        <section class="featured">
-          <div class="inner"></div>
+          <div class="inner">
+            <h2>Another Section</h2>
+            <p>Some content here.</p>
+          </div>
         </section>
       </main>
       <footer>
         <div class="inner">
           <div class="sitemap">
-            <div class="map"></div>
-            <div class="map"></div>
-            <div class="map"></div>
-            <div class="map"></div>
+            <div class="map">
+              <h4>Site Map 1</h4>
+              <ul class="lists">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+              </ul>
+            </div>
+            <div class="map">
+              <h4>Site Map 2</h4>
+              <ul class="lists">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+              </ul>
+            </div>
+            <div class="map">
+              <h4>Site Map 3</h4>
+              <ul class="lists">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+              </ul>
+            </div>
+            <div class="map">
+              <h4>Site Map 4</h4>
+              <ul class="lists">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+              </ul>
+            </div>
           </div>
           <hr />
           <div class="copyright">
-            <h4></h4>
-            <ul class="lists"></ul>
+            <p>&copy; 2024 Nike, Inc. All Rights Reserved</p>
           </div>
-          <hr />
-          <div class="content"></div>
         </div>
       </footer>
     </div>
